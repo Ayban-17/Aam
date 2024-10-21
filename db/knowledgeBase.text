@@ -1,0 +1,6 @@
+QUESTION: How to make the plus button on spotlight carousel visible
+ANSWER: Go to app smith and search for the feature “hide plus button” and toggle it off
+
+QUESTION: What does the Plus button in the spotlight do
+ANSWER: By default, when a product is added to the cart, customers won’t see the update immediately; they’ll need to refresh the page. To enable real-time updates, follow the steps provided in this link: https://xfusion-support.slack.com/archives/C05D452P45C/p1723556970090549. This link includes instructions on how to subscribe. You can share these steps with your client and explain that they can insert the cart refresh function within the code provided in the instructions.
+
