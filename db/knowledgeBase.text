@@ -4,3 +4,11 @@ ANSWER: Go to app smith and search for the feature “hide plus button” and to
 QUESTION: What does the Plus button in the spotlight do
 ANSWER: By default, when a product is added to the cart, customers won’t see the update immediately; they’ll need to refresh the page. To enable real-time updates, follow the steps provided in this link: https://xfusion-support.slack.com/archives/C05D452P45C/p1723556970090549. This link includes instructions on how to subscribe. You can share these steps with your client and explain that they can insert the cart refresh function within the code provided in the instructions.
 
+QUESTION: Why was the ‘Collection page videos’ feature removed?
+ANSWER: Dov reviewed the quality for self-serve customers and wasn't satisfied with it, so he requested that we take it down until we can fix the issues.
+
+QUESTION: how to hide the widget once the side cart drawer is opened?
+ANSWER: #tolstoyWidgetElement{z-index:60 !important;} The number 60 can be change according to the z-index of the cart drawer
+
+QUESTION: Is there a way to resize the in-app product image preview?
+ANSWER: Davidi addressed this question in the following link: https://tolstoyapp.slack.com/archives/C055E598LCT/p1729517267831299?thread_ts=1729515633.195729&cid=C055E598LCT. It might be a good idea to ask for an update regarding any progress on the option to change the size of the in-app product image.
