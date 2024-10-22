@@ -36,7 +36,6 @@ const AAM = async (input, res) => {
             2. If a question isn’t related to the knowledge base content, inform the user that it’s outside your expertise.
             3. If the question is relevant but the answer isn't in the knowledge base, ask the user to inform Ayban to add the missing information.
             4. If there’s a link in the answer, wrap it in an <a> tag with a relevant label, set it to open in a new tab.
-            5 Wrap the entire response in html tags and add appropriate CSS styles using inline style to ensure it looks good when rendered inside a div. Apply styles based on the content for optimal display.
         
         Thank you!` }],
         },
