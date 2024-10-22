@@ -1,39 +1,80 @@
-QUESTION: How to make the plus button on spotlight carousel visible
-ANSWER: Go to app smith and search for the feature “hide plus button” and toggle it off
+{
+    QUESTION: How to make the plus button on spotlight carousel visible
+    ANSWER: Go to app smith and search for the feature “hide plus button” and toggle it off
+}{
+    QUESTION: What does the Plus button in the spotlight do
+    ANSWER: By default, when a product is added to the cart, customers won’t see the update immediately; they’ll need to refresh the page. To enable real-time updates, follow the steps provided in this link: https://xfusion-support.slack.com/archives/C05D452P45C/p1723556970090549. This link includes instructions on how to subscribe. You can share these steps with your client and explain that they can insert the cart refresh function within the code provided in the instructions.
+}{
+    QUESTION: Why was the ‘Collection page videos’ feature removed?
+    ANSWER: Dov reviewed the quality for self-serve customers and wasn't satisfied with it, so he requested that we take it down until we can fix the issues.
+}{
+    QUESTION: how to hide the widget once the side cart drawer is opened?
+    ANSWER: #tolstoyWidgetElement{z-index:60 !important;} The number 60 can be change according to the z-index of the cart drawer
+}{
+    QUESTION: Is there a way to resize the in-app product image preview?
+    ANSWER: Davidi addressed this question in the following link: https://tolstoyapp.slack.com/archives/C055E598LCT/p1729517267831299?thread_ts=1729515633.195729&cid=C055E598LCT. It might be a good idea to ask for an update regarding any progress on the option to change the size of the in-app product image.
+}{
+    QUESTION: I am using a page builder to build my web store pages. Will Tolstoy integrate with the page builder app?
+    ANSWER: Tolstoy will work on page builder. If you want to display Carousel or Stories in a Page Builder like Replo, GemPages, PageFly, Zipify, or Shogun, here’s how you can do it:
+        1. Go to the Onsite tab in your Tolstoy dashboard.
+        2. Select the Tolstoy project you created.
+        3. Click the publish button (top right) and then click “Use code instead” to copy the code.
+        4. Next, paste this code in your page builder using their Custom HTML block or Custom liquid block. 
 
-QUESTION: What does the Plus button in the spotlight do
-ANSWER: By default, when a product is added to the cart, customers won’t see the update immediately; they’ll need to refresh the page. To enable real-time updates, follow the steps provided in this link: https://xfusion-support.slack.com/archives/C05D452P45C/p1723556970090549. This link includes instructions on how to subscribe. You can share these steps with your client and explain that they can insert the cart refresh function within the code provided in the instructions.
+        If you need specific instructions for each page builder, here are some helpful links:
+        - Replo: https://support.replo.app/hc/en-us/articles/17196208191117-Custom-HTML-and-Liquid
+        - GemPages: https://help.gempages.net/articles/custom-code-liquid-element
+        - PageFly: https://help.pagefly.io/manual/html-liquid-element/
+        - Zipify: https://help.zipify.com/en/articles/2094255-html-section-zipify-pages
+        - Shogun: https://getshogun.com/help/en/articles/1391671-how-to-embed-html-code-in-shogun
+}{
+    QUESTION: How to change widget size?
+    ANSWER: Here's how to change the widget's size. Change the px by your preference. You can implement this code to your CSS file: .tolstoy-text-bubble-container { width: 300px !important; height: 400px !important; } 
+}{
+    QUESTION: Why does adding to cart not does not work for Non Shopify?
+    ANSWER: According to our dev team, the 'Add to Cart' button isn't functioning properly because it requires specific integration that isn't automatically provided for non-Shopify platforms.
+        To enable it, please use the link below with implementation instructions.
+        ​https://developers.gotolstoy.com/javascript-sdk/subscriptions#add-to-cart
+}{
+    QUESTION: How do we add a tile video per collection page using Shopify Metafields instead of creating new templates for each collection?
+    ANSWER: Go to the section where they want to render the Tile. Create an if statement base on the name of the collection and render the relevant tile for each of the collection. 
+        Here’s a sample code: 
+        {% if collection.title == 'Name of collection' %}
 
-QUESTION: Why was the ‘Collection page videos’ feature removed?
-ANSWER: Dov reviewed the quality for self-serve customers and wasn't satisfied with it, so he requested that we take it down until we can fix the issues.
+            <tolstoy-tile
+            data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}"
+            class="tolstoy-tile"
+            data-publish-id="4ddz7s9bod896" 
+            data-product-id="{{ product.id }}">
+            </tolstoy-tile>
+        
+        {% elsif collection.title == 'Name of collection' %}
 
-QUESTION: how to hide the widget once the side cart drawer is opened?
-ANSWER: #tolstoyWidgetElement{z-index:60 !important;} The number 60 can be change according to the z-index of the cart drawer
+            <tolstoy-tile
+            data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}"
+            class="tolstoy-tile"
+            data-publish-id="4ddz7s9bod896" 
+            data-product-id="{{ product.id }}">
+            </tolstoy-tile>
+        
+        {% else %}
 
-QUESTION: Is there a way to resize the in-app product image preview?
-ANSWER: Davidi addressed this question in the following link: https://tolstoyapp.slack.com/archives/C055E598LCT/p1729517267831299?thread_ts=1729515633.195729&cid=C055E598LCT. It might be a good idea to ask for an update regarding any progress on the option to change the size of the in-app product image.
+            <tolstoy-tile
+            data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}"
+            class="tolstoy-tile"
+            data-publish-id="4ddz7s9bod896" 
+            data-product-id="{{ product.id }}">
+            </tolstoy-tile>
+        
+        {% endif %}
 
-QUESTION: I am using a page builder to build my web store pages. Will Tolstoy integrate with the page builder app?
-ANSWER: Tolstoy will work on page builder. If you want to display Carousel or Stories in a Page Builder like Replo, GemPages, PageFly, Zipify, or Shogun, here’s how you can do it:
-    1. Go to the Onsite tab in your Tolstoy dashboard.
-    2. Select the Tolstoy project you created.
-    3. Click the publish button (top right) and then click “Use code instead” to copy the code.
-    4. Next, paste this code in your page builder using their Custom HTML block or Custom liquid block. 
+        This code will render the Tolstoy video based on the collection title. The client can change the publish ID for each specific condition to customize the content displayed for each collection.
 
-    If you need specific instructions for each page builder, here are some helpful links:
-    - Replo: https://support.replo.app/hc/en-us/articles/17196208191117-Custom-HTML-and-Liquid
-    - GemPages: https://help.gempages.net/articles/custom-code-liquid-element
-    - PageFly: https://help.pagefly.io/manual/html-liquid-element/
-    - Zipify: https://help.zipify.com/en/articles/2094255-html-section-zipify-pages
-    - Shogun: https://getshogun.com/help/en/articles/1391671-how-to-embed-html-code-in-shogun
-
-QUESTION: How to change widget size?
-ANSWER: Here's how to change the widget's size. Change the px by your preference. You can implement this code to your CSS file: .tolstoy-text-bubble-container { width: 300px !important; height: 400px !important; } 
+}
 
 
-QUESTION: Why does adding to cart not does not work for Non Shopify?
-ANSWER: According to our dev team, the 'Add to Cart' button isn't functioning properly because it requires specific integration that isn't automatically provided for non-Shopify platforms.
-    To enable it, please use the link below with implementation instructions.
-    ​https://developers.gotolstoy.com/javascript-sdk/subscriptions#add-to-cart
+
+
+
 
 
