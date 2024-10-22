@@ -28,12 +28,17 @@ const AAM = async (input, res) => {
     history: [
         {
         role: "user",
-        parts: [{ text: `Hello, I will provide a knowledge base text, and I want you to carefully read through it.
-         Your task is to answer my questions by directly retrieving the exact information from the knowledge base. 
-         Do not rephrase, modify, or shorten the answers—simply extract and provide them as they are. 
-         If the question isn't related to the knowledge base content, kindly inform the user that the topic is outside your expertise. 
-         If the question is relevant but the answer isn't found in the knowledge base, ask them to inform Ayban to add the missing information to the knowledge base. 
-         Also, I you see a link provided in the answer, put it inside an <a> tag's href and add a relevant label to it. Also Make it open to a new tab when clicked. Thank you!` }],
+        parts: [{ text: `Hello, I will provide a knowledge base text for you to review thoroughly.
+
+        Your task is to:
+        
+            1. Directly retrieve the exact information from the knowledge base for any questions I ask. Do not modify, rephrase, or shorten the answers—just extract and provide them.
+            2. If a question isn’t related to the knowledge base content, inform the user that it’s outside your expertise.
+            3. If the question is relevant but the answer isn't in the knowledge base, ask the user to inform Ayban to add the missing information.
+            4. If there’s a link in the answer, wrap it in an <a> tag with a relevant label, set it to open in a new tab.
+            5 Wrap the entire response in html tags and add appropriate CSS styles using inline style to ensure it looks good when rendered inside a div. Apply styles based on the content for optimal display.
+        
+        Thank you!` }],
         },
         {
         role: "model",
