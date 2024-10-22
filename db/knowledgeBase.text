@@ -41,35 +41,25 @@
         Here’s a sample code: 
         {% if collection.title == 'Name of collection' %}
 
-            <tolstoy-tile
-            data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}"
-            class="tolstoy-tile"
-            data-publish-id="4ddz7s9bod896" 
-            data-product-id="{{ product.id }}">
-            </tolstoy-tile>
+             {Tolstoy code here}
+        
         
         {% elsif collection.title == 'Name of collection' %}
 
-            <tolstoy-tile
-            data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}"
-            class="tolstoy-tile"
-            data-publish-id="4ddz7s9bod896" 
-            data-product-id="{{ product.id }}">
-            </tolstoy-tile>
+            {Tolstoy code here}
+        
         
         {% else %}
 
-            <tolstoy-tile
-            data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}"
-            class="tolstoy-tile"
-            data-publish-id="4ddz7s9bod896" 
-            data-product-id="{{ product.id }}">
-            </tolstoy-tile>
+           {Tolstoy code here}
         
         {% endif %}
 
         This code will render the Tolstoy video based on the collection title. The client can change the publish ID for each specific condition to customize the content displayed for each collection.
 
+}{
+    QUESTION: Is there a way to remove the play button on the GIF shown when using Offsite email campaigns? 
+    ANSWER: The button inside the preview is integrated into the preview itself and doesn’t have a separate element we can target with CSS. Therefore, there's no way to remove it from the front end.
 }
 
 
