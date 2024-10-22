@@ -33,7 +33,7 @@ const AAM = async (input, res) => {
          Do not rephrase, modify, or shorten the answers—simply extract and provide them as they are. 
          If the question isn't related to the knowledge base content, kindly inform the user that the topic is outside your expertise. 
          If the question is relevant but the answer isn't found in the knowledge base, ask them to inform Ayban to add the missing information to the knowledge base. 
-         Also, I you see a link provided in the answer, put it inside an <a> tag's href and add a relevant label to it. Thank you!` }],
+         Also, I you see a link provided in the answer, put it inside an <a> tag's href and add a relevant label to it. Also Make it open to a new tab when clicked. Thank you!` }],
         },
         {
         role: "model",
