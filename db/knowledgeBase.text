@@ -28,8 +28,7 @@ ANSWER: Tolstoy will work on page builder. If you want to display Carousel or St
     - Shogun: https://getshogun.com/help/en/articles/1391671-how-to-embed-html-code-in-shogun
 
 QUESTION: How to change widget size?
-ANSWER: Here's how to change the widget's size. Change the px by your preference. You can implement this code to your CSS file:
-​   ​<style> .tolstoy-text-bubble-container { width: 300px !important; height: 400px !important; } </style>
+ANSWER: Here's how to change the widget's size. Change the px by your preference. You can implement this code to your CSS file: .tolstoy-text-bubble-container { width: 300px !important; height: 400px !important; } 
 
 
 QUESTION: Why does adding to cart not does not work for Non Shopify?
