@@ -60,6 +60,12 @@
 }{
     QUESTION: Is there a way to remove the play button on the GIF shown when using Offsite email campaigns? 
     ANSWER: The button inside the preview is integrated into the preview itself and doesn’t have a separate element we can target with CSS. Therefore, there's no way to remove it from the front end.
+}{
+    QUESTION: How to add the Tolstoy video project using Elementor in WordPress?
+    ANSWER: Here’s a helpful article about integrating Tolstoy into wordpress: https://help.gotolstoy.com/en/articles/5997664-how-can-i-integrate-wordpress-with-tolstoy 
+}{
+    QUESTION: How to display the widget on checkout without passing sku or product id? Or maybe pass multiple skus or product ids? Is that possible?
+    ANSWER: Unfortunately, it’s not possible. A product ID is required if they are using product page stories. Only one product ID can be passed in a single Tolstoy story; multiple product IDs are not supported.
 }
 
 
